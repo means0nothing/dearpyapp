@@ -104,7 +104,7 @@ def dpg_get_default_theme(tag=0):
         with dpg.theme_component(dpg.mvText):
             dpg.add_theme_color(dpg.mvThemeCol_Text, c.GRAY_22)
 
-        for item_type in (dpg.mvInputText, dpg.mvInputInt, dpg.mvInputFloat, dpg.mvCombo, dpg.mvCheckbox):
+        for item_type in (dpg.mvInputText, dpg.mvInputInt, dpg.mvInputFloat, dpg.mvCombo):
             with dpg.theme_component(item_type):
                 dpg.add_theme_color(dpg.mvThemeCol_Text, c.GRAY_20)
                 dpg.add_theme_color(dpg.mvThemeCol_FrameBg, c.GRAY_2)
@@ -113,6 +113,19 @@ def dpg_get_default_theme(tag=0):
                 dpg.add_theme_color(dpg.mvThemeCol_Border, c.GRAY_5)
                 dpg.add_theme_color(dpg.mvThemeCol_BorderShadow, c.TRANSPARENT)
                 dpg.add_theme_color(dpg.mvThemeCol_TextDisabled, c.GRAY_12)
+                dpg.add_theme_color(dpg.mvThemeCol_Button, c.GRAY_4)
+                dpg.add_theme_color(dpg.mvThemeCol_ButtonHovered, c.GRAY_4)
+                dpg.add_theme_color(dpg.mvThemeCol_ButtonActive, c.GRAY_4)
+
+
+        with dpg.theme_component(dpg.mvCheckbox):
+            dpg.add_theme_color(dpg.mvThemeCol_FrameBg, c.GRAY_3)
+            dpg.add_theme_color(dpg.mvThemeCol_FrameBgHovered, c.GRAY_4)
+            dpg.add_theme_style(dpg.mvStyleVar_FrameBorderSize, 1, 1)
+            dpg.add_theme_color(dpg.mvThemeCol_Border, c.GRAY_5)
+            dpg.add_theme_color(dpg.mvThemeCol_BorderShadow, c.TRANSPARENT)
+            dpg.add_theme_color(dpg.mvThemeCol_TextDisabled, c.GRAY_12)
+
 
         with dpg.theme_component(dpg.mvListbox):
             dpg.add_theme_color(dpg.mvThemeCol_FrameBg, c.GRAY_3)

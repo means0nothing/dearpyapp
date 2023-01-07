@@ -33,7 +33,7 @@ class TabBar:
         self.title_width = title_width
         self.tab_factory = tab_factory
         self.active_tab: t.Optional[Tab, t.Any] = None
-        self.tabs: list[Tab, t.Any] = []
+        self.tabs: list[t.Union[Tab, t.Any]] = []
 
     def set_tab(self, tab: Tab):
         if self.active_tab:

@@ -5,6 +5,9 @@ import dearpygui.dearpygui as dpg
 
 from .utils import dpg_get_item_container
 
+# item, component, theme, handler
+# update, create
+
 
 def _run_callbacks(jobs):
     if jobs is not None:
